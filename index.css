@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+/* GENERIC */
+body {
+  padding: 32px;
+}
+
+.container {
+  padding: 80px 0;
+}
+
+.row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* NAVIGATION */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 24px;
+}
+
+.logo__img {
+  width: 60px;
+  height: 60px;
+  margin-right: 12px;
+}
+
+.nav__anchor {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 24px;
+  padding-bottom: 4px;
+}
+
+a {
+  position: relative;
+}
+
+.hover__effect:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #fff;
+  width: 0;
+  bottom: -3px;
+  right: 0;
+  transition: all 300ms ease;
+}
+
+.hover__effect:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.primary:hover {
+  color: #fff;
+  background-color: darkred;
+}
+
+.primary {
+  color: #fff;
+  background-color: #242424;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* MAIN */
+.hero__container {
+  position: relative;
+}
+
+.hero__inner--container {
+  background-image: url("./OMDbAPI\ Asset/bg-hero.jpg");
+  width: 100%;
+  height: 450px;
+  background-color: #242424;
+ 
+}
+
+.hero__content--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: .1em;
+  font-size: 45px;
+  max-width: 1000px;
+  margin-bottom: 40px;
+  padding-top: 24px;
+  color: #fff;
+  line-height: 1.25;
+}
+
+.input__wrapper {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+input {
+  color: rgba(0, 0, 0, .87);
+  width: 100%;
+  max-width: 800px;
+  height: 60px;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.font__awesome--wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  padding: 0 20px 0 8px;
+  color: #242424;
+  font-size: 32px;
+}
+
+.fa-magnifying-glass {
+  overflow: visible;
+  display: inline-block;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+.fa-magnifying-glass:hover {
+  color: darkred;
+}
+
+/* SEARCH */
+
+#search {
+  position: relative;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.filter__container {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search__info {
+  color: black;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: .1em;
+  font-size: 24px;
+  max-width: 1000px;
+  line-height: 1.25;
+}
+
+#filter {
+  color: black;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: .1em;
+  font-size: 24px;
+  max-width: 1000px;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+/* MOVIES */
+
+.movie__list {
+  display: flex;
+  justify-content: center;align-items: center;
+  flex-wrap: wrap;
+  border: 12px solid#f4f8fa;
+  padding: 24px 0;
+}
+
+.movie__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 384px;
+  margin: 16px;
+  cursor: pointer;
+}
+
+.movie__img--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.movie__img {
+  transition: all 1000ms ease;
+}
+
+.movie__title {
+  transition: all 1000ms ease;
+}
+
+.movie__img--wrapper:hover .movie__title{
+  transform: scale(1.09);
+  color: darkred;
+}
+
+.movie__img--wrapper:hover .movie__img {
+  transform: scale(1.03);
+}
+
+.movie__img--wrapper:hover .movie__year {
+  color: darkred;
+}
+
+.movie__img--wrapper:hover .movie__genre {
+  color: darkred;
+}
+
+.movie__img {
+  padding-bottom: 8px;
+  border-radius: 10px;
+}
+
+.movie__title {
+  padding-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(8, 14, 44,);
+  transition: all 300ms ease;
+}
+
+.movie__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.movie__year, .movie__genre {
+  padding-bottom: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0 8px;
+  color: rgb(8, 14, 44,);
+}
+
+
+
