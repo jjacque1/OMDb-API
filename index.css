@@ -212,7 +212,7 @@ input {
   padding: 24px 0;
 }
 
-.movie__wrapper {
+.movie {
   display: flex;
   justify-content: center;
   align-items: center;
