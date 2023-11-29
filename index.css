@@ -20,6 +20,11 @@ body {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+  color: #242424;
+}
+
 /* NAVIGATION */
 
 .nav {
@@ -233,6 +238,7 @@ input {
 
 .movie__img {
   transition: all 1000ms ease;
+  width: 100%;
 }
 
 .movie__title, .movie__year, .movie__genre{
@@ -289,4 +295,10 @@ input {
 }
 
 
+/* MOVIE.HTML */
 
+.movie__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
