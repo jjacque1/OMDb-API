@@ -209,7 +209,7 @@ input {
   justify-content: center;align-items: center;
   flex-wrap: wrap;
   border: 12px solid#f4f8fa;
-  padding: 24px 0;
+  padding: 16px 0;
 }
 
 .movie {
@@ -222,18 +222,23 @@ input {
   cursor: pointer;
 }
 
-.movie__img--wrapper {
+.movie__card {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
+  margin: 24px;
 }
 
 .movie__img {
   transition: all 1000ms ease;
 }
 
-.movie__title {
+.movie__title, .movie__year, .movie__genre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 1000ms ease;
 }
 
