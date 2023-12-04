@@ -297,8 +297,17 @@ input {
 
 /* MOVIE.HTML */
 
-.movie__wrapper {
+.result_grid {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.movie_poster {
+  padding: 24px;
+}
+
+.movie_info {
+ padding: 24px;
+ width: 50%;
 }
