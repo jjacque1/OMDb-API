@@ -1,7 +1,7 @@
 //API: https://www.omdbapi.com/?apikey=bef2d4c&s=fast
 // DETAILS: https://www.omdbapi.com/?i=${movies.imdbID}&apikey=bef2d4c
 
-const url = "https://www.omdbapi.com/?apikey=bef2d4c&s=hard";
+const url = "https://www.omdbapi.com/?apikey=bef2d4c&s=two";
 const movie__listEl = document.querySelector(".movie__list");
 async function main() {
   const movies = await fetch(url);
