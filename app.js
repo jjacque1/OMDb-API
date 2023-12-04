@@ -1,7 +1,7 @@
 //API: https://www.omdbapi.com/?apikey=bef2d4c&s=fast
 // DETAILS: https://www.omdbapi.com/?i=${movies.imdbID}&apikey=bef2d4c
 
-const url = "https://www.omdbapi.com/?apikey=bef2d4c&s=game";
+const url = "https://www.omdbapi.com/?apikey=bef2d4c&s=hard";
 const movie__listEl = document.querySelector(".movie__list");
 async function main() {
   const movies = await fetch(url);
@@ -14,11 +14,7 @@ async function main() {
 }
 
 main();
-
-function showMovieDetails(movies) {
-
-}
-
+ 
 function moviesHtml(movies) {
   return `<a href="movie.html" target="_blank" class="movie__card">
   <div class="movie__img--wrapper">
