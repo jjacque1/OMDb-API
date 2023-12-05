@@ -108,7 +108,6 @@ li {
   width: 100%;
   height: 450px;
   background-color: #242424;
- 
 }
 
 .hero__content--wrapper {
@@ -121,7 +120,7 @@ li {
 h1 {
   font-weight: 500;
   text-align: center;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-size: 45px;
   max-width: 1000px;
   margin-bottom: 40px;
@@ -139,7 +138,7 @@ h1 {
 }
 
 input {
-  color: rgba(0, 0, 0, .87);
+  color: rgba(0, 0, 0, 0.87);
   width: 100%;
   max-width: 800px;
   height: 60px;
@@ -176,7 +175,6 @@ input {
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
-  
 }
 
 .filter__container {
@@ -190,7 +188,7 @@ input {
   color: black;
   font-weight: 400;
   text-align: center;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-size: 24px;
   max-width: 1000px;
   line-height: 1.25;
@@ -200,7 +198,7 @@ input {
   color: black;
   font-weight: 400;
   text-align: center;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-size: 24px;
   max-width: 1000px;
   line-height: 1.25;
@@ -211,7 +209,8 @@ input {
 
 .movie__list {
   display: flex;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   border: 12px solid#f4f8fa;
   padding: 16px 0;
@@ -241,14 +240,16 @@ input {
   width: 100%;
 }
 
-.movie__title, .movie__year, .movie__genre{
+.movie__title,
+.movie__year,
+.movie__genre {
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 1000ms ease;
 }
 
-.movie__img--wrapper:hover .movie__title{
+.movie__img--wrapper:hover .movie__title {
   transform: scale(1.09);
   color: darkred;
 }
@@ -274,7 +275,7 @@ input {
   padding-bottom: 8px;
   font-size: 20px;
   font-weight: 500;
-  color: rgb(8, 14, 44,);
+  color: rgb(8, 14, 44);
   transition: all 300ms ease;
 }
 
@@ -286,14 +287,14 @@ input {
   width: 100%;
 }
 
-.movie__year, .movie__genre {
+.movie__year,
+.movie__genre {
   padding-bottom: 8px;
   font-size: 18px;
   font-weight: 400;
   padding: 0 8px;
-  color: rgb(8, 14, 44,);
+  color: rgb(8, 14, 44);
 }
-
 
 /* MOVIE.HTML */
 
@@ -305,9 +306,32 @@ input {
 
 .movie_poster {
   padding: 24px;
+  position: relative;
 }
 
 .movie_info {
- padding: 24px;
- width: 50%;
+  padding: 24px;
+  width: 50%;
+}
+
+.movie_misc_info {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+#body {
+  background-color: #f4f8fa;
+  line-height: 1.5;
+}
+
+.fa-play {
+  position: absolute;
+  color: #fff;
+  font-size: 50px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 26px;
+  border-radius: 50%;
 }
