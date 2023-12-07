@@ -146,6 +146,13 @@ input {
   padding-left: 20px;
 }
 
+.search__btn {
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  align-self: center;
+}
+
 .font__awesome--wrapper {
   position: absolute;
   top: 0;
@@ -158,10 +165,9 @@ input {
 }
 
 .fa-magnifying-glass {
-  overflow: visible;
-  display: inline-block;
-  height: 1em;
-  vertical-align: -0.125em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fa-magnifying-glass:hover {
