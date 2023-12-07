@@ -36,9 +36,15 @@
         <div class="hero__content--wrapper">
           <h1>Browse latest movies</h1>
           <div class="input__wrapper">
-            <input type="text" placeholder="Search by Movie Name" id="movie-search-box"/>
+            <input
+              type="text" 
+              placeholder="Search by Movie Name"
+              id="movie-name"
+            />
             <div class="font__awesome--wrapper">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <a href="" id="movie__search-btn" onclick="main">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -63,7 +69,7 @@
     <section id="movies">
       <div class="container">
         <div class="row">
-          <div class="movie__list">
+          <div class="movie__list" id="result">
             <div class="movie">
               <!-- <a href="movie.html" target="_blank" class="movie__card">
                 <div class="movie__img--wrapper">
@@ -83,25 +89,35 @@
           </div>
         </div>
       </div>
+      <div id="result">
+
+      </div>
     </section>
     <footer id="footer">
       <ul class="social__lists">
         <li class="social__list-item">
-          <a class="footer_hover__effect" href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a class="footer_hover__effect" href=""
+            ><i class="fa-brands fa-instagram"></i> Instagram</a
+          >
         </li>
         <li class="social__list-item">
-          <a class="footer_hover__effect" href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+          <a class="footer_hover__effect" href=""
+            ><i class="fa-brands fa-facebook-f"></i> Facebook</a
+          >
         </li>
         <li class="social__list-item">
-          <a class="footer_hover__effect" href=""><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+          <a class="footer_hover__effect" href=""
+            ><i class="fa-brands fa-x-twitter"></i> Twitter</a
+          >
         </li>
         <li class="social__list-item">
-          <a class="footer_hover__effect" href=""><i class="fa-brands fa-snapchat"></i> Snapchat</a>
+          <a class="footer_hover__effect" href=""
+            ><i class="fa-brands fa-snapchat"></i> Snapchat</a
+          >
         </li>
       </ul>
       <p class="footer__para">Copyright <b>&copy</b> 2023 MovieJack</p>
     </footer>
     <script src="app.js"></script>
   </body>
-  
 </html>
