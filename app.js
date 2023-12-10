@@ -3,22 +3,17 @@
 
 let movieNameRef = document.getElementById("movie-name");
 let searchBtn = document.getElementById("movie__search-btn");
-let result = document.getElementById("result")
+let result = document.getElementById("result");
 
-
-
-
-
-// const movie__listEl = document.querySelector(".movie__list");
 async function main() {
   let movieName = movieNameRef.value;
-  
+
   let url = `http://www.omdbapi.com/?t=${movieName}&apikey=bef2d4c`;
   const movies = await fetch(url);
   const moviesData = await movies.json();
-  console.log(moviesData)
-  
-  if(moviesData.Response === "True"){
+  console.log(moviesData);
+
+  if (moviesData.Response === "True") {
     result.innerHTML = `<div class="result_grid" id="result_grid">
     <div class="movie_poster">
       <img
@@ -52,41 +47,12 @@ async function main() {
       <p class="runtime"><b>Runtime:</b> ${moviesData.Runtime}</p>
       <p class="director"><b>Director:</b> ${moviesData.Director}</p>
     </div>
-  </div>`
-  } 
-
-  else if(movieName.length === 0) {
+  </div>`;
+  } else if (movieName.length === 0) {
     result.innerHTML = `<h3 class="msg"> Please Enter a Movie Name </h3>`;
+  } else {
+    result.innerHTML = `<h3 class="msg"> Sorry, movie not found. </h3>`;
   }
-  
-  else {
-    result.innerHTML = `<h3 class="msg"> Sorry, something went wrong. </h3>`;
-  }
-
-
-  // movie__listEl.innerHTML = moviesData.Search.map((movies) =>
-  //   moviesHtml(movies)
-  // ).join("");
 }
 
-searchBtn.addEventListener("click", main)
-
-
 main();
- 
-// function moviesHtml(movies) {
-//   return `<a href="movie.html" target="_blank" class="movie__card">
-//   <div class="movie__img--wrapper">
-//     <img
-//       class="movie__img"
-//       src=${movies.Poster}
-//       alt=""
-//     />
-//     <p class="movie__title">${movies.Title}</p>
-//     <div class="movie__info">
-//       <span class="movie__year">${movies.Year}</span>
-//       <span class="movie__genre">${movies.Type}</span>
-//     </div>
-//   </div>
-//  </a>`;
-// }
