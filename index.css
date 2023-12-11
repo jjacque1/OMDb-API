@@ -150,7 +150,12 @@ input {
   border: none;
   font-size: 32px;
   cursor: pointer;
-  align-self: center;
+
+  background-color: transparent;
+}
+
+.fa-magnifying-glass {
+  padding-top: 16px;
 }
 
 .font__awesome--wrapper {
@@ -302,6 +307,7 @@ input {
   color: rgb(8, 14, 44);
 }
 
+
 /* MOVIE.HTML */
 
 .moviehtml {
@@ -338,17 +344,6 @@ input {
 .img {
   content: "<i class="fa-solid fa-play before"></i>";
   position: relative;
-}
-
-.fa-play {
-  position: absolute;
-  color: #fff;
-  font-size: 50px;
-  background-color: transparent;
-  border: 2px solid #fff;
-  padding: 26px;
-  border-radius: 50%;
-  z-index: 2;
 }
 
 .movie_title {
