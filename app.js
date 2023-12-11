@@ -11,7 +11,7 @@ async function main() {
   let url = `http://www.omdbapi.com/?t=${movieName}&apikey=bef2d4c`;
   const movies = await fetch(url);
   const moviesData = await movies.json();
-  console.log(moviesData);
+  
 
   if (moviesData.Response === "True") {
     result.innerHTML = `<div class="result_grid" id="result_grid">
@@ -56,3 +56,13 @@ async function main() {
 }
 
 main();
+
+
+
+async function renderMovies() {
+  const allMovies = await fetch(`https://www.omdbapi.com/?apikey=bef2d4c&s=game`);
+  const allMoviesData = await allMovies.json();
+  console.log(allMoviesData.Search)
+}
+
+renderMovies();
