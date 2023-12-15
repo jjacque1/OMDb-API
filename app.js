@@ -59,10 +59,10 @@ main();
 
 
 
-async function renderMovies() {
-  const allMovies = await fetch(`https://www.omdbapi.com/?apikey=bef2d4c&s=game`);
-  const allMoviesData = await allMovies.json();
-  console.log(allMoviesData.Search)
-}
+// async function renderMovies() {
+//   const allMovies = await fetch(`https://www.omdbapi.com/?apikey=bef2d4c&s=game`);
+//   const allMoviesData = await allMovies.json();
+//   console.log(allMoviesData.Search)
+// }
 
-renderMovies();
+// renderMovies();
