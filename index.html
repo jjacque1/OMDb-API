@@ -37,9 +37,9 @@
           <h1>Browse latest movies</h1>
           <div class="input__wrapper">
             <input
-              type="text"
+              type="text" onkeypress="main()"
               placeholder="Search by Movie Name"
-              id="movie-name"
+              id="movie-name" 
             />
             <div class="font__awesome--wrapper">
               <button
@@ -61,9 +61,8 @@
     <section id="search">
       <div class="filter__container">
         <h2 id="search__info" class="search__info">Search result:</h2>
-        <!-- <h2 id="search__result" class="search__result">Search result for:</h2> -->
         <div class="filter__wrapper">
-          <select id="filter" onchange="filterMovies(event)">
+          <select id="filter">
             <option value="" disabled selected>Filter</option>
             <option value="LATEST">Latest</option>
             <option value="TRENDING">Trending</option>
@@ -75,8 +74,8 @@
     <section id="movies">
       <div class="container">
         <div class="row">
+
           <div class="movie__list" id="result"></div>
-          <div class="movie__list" id="movieFast"></div>
         </div>
       </div>
     </section>
@@ -109,4 +108,3 @@
   </body>
 </html>
 
-<!-- https://www.youtube.com/watch?v=TgE71N0q5yI -->
