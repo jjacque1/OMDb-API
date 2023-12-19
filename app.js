@@ -58,26 +58,33 @@ main();
 
 
 
-//API: https://www.omdbapi.com/?apikey=bef2d4c&s=fast
-// let resultFastMovies = document.getElementById("movieFast");
+// const url = "https://www.omdbapi.com/?apikey=bef2d4c&s=hard";
+// const movie__listEl = document.querySelector(".movie__list");
+// async function main() {
+//   const movies = await fetch(url);
+//   const moviesData = await movies.json();
+//   console.log(moviesData.Search)
 
-// async function allFastMovies() {
-//   const movieFast = await fetch("https://www.omdbapi.com/?apikey=bef2d4c&s=fast");
-//   const movieFastData = await movieFast.json();
-
-//   const movieshtml = movieFastData.Search.map(movieFast => ` <div class="movie__img--wrapper">
-//   //   <img
-//   //     class="movie__img"
-//   //     src="${movieFastData.Poster}"
-//   //     alt=""
-//   //   />
-//   //   <p class="movie__title">${movieFastData.Title}</p>
-//   //   <div class="movie__info">
-//   //     <span class="movie__year">${movieFastData.Year}</span>
-//   //     <span class="movie__genre">${movieFastData.Genre}</span>
-//   //   </div>
-//   // </div>`)
-
+//   movie__listEl.innerHTML = moviesData.Search.map((movies) =>
+//     moviesHtml(movies)
+//   ).join("");
 // }
 
-// allFastMovies()
+// main();
+ 
+// function moviesHtml(movies) {
+//   return `<a href="movie.html" target="_blank" class="movie__card">
+//   <div class="movie__img--wrapper">
+//     <img
+//       class="movie__img"
+//       src=${movies.Poster}
+//       alt=""
+//     />
+//     <p class="movie__title">${movies.Title}</p>
+//     <div class="movie__info">
+//       <span class="movie__year">${movies.Year}</span>
+//       <span class="movie__genre">${movies.Type}</span>
+//     </div>
+//   </div>
+//  </a>`;
+// }
