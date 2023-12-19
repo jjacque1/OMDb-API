@@ -4,6 +4,8 @@
 let movieNameRef = document.getElementById("movie-name");
 let searchBtn = document.getElementById("movie__search-btn");
 let result = document.getElementById("result");
+let resultFastMovies = document.getElementById("movieFast");
+
 
 async function main() {
   let movieName = movieNameRef.value;
@@ -11,6 +13,8 @@ async function main() {
   let url = `http://www.omdbapi.com/?t=${movieName}&apikey=bef2d4c`;
   const movies = await fetch(url);
   const moviesData = await movies.json();
+
+  
   
 
   if (moviesData.Response === "True") {
@@ -58,11 +62,38 @@ async function main() {
 main();
 
 
+// async function filterMovies(event) {
+//   const moviesFilter = await fetch("");
+//   const moviesFilterData = await moviesFilter.json();
 
-// async function renderMovies() {
-//   const allMovies = await fetch(`https://www.omdbapi.com/?apikey=bef2d4c&s=game`);
-//   const allMoviesData = await allMovies.json();
-//   console.log(allMoviesData.Search)
 // }
 
-// renderMovies();
+
+//API: https://www.omdbapi.com/?apikey=bef2d4c&s=fast
+
+
+async function allFastMovies() {
+  const movieFast = await fetch("https://www.omdbapi.com/?apikey=bef2d4c&s=fast");
+  const movieFastData = await movieFast.json();
+  console.log(movieFastData.Search)
+
+  movieFastData.Search.map(movie => {
+    console.log(movieFastData)
+  })
+
+  //   resultFastMovies.innerHTML = ` <div class="movie__img--wrapper">
+  //   <img
+  //     class="movie__img"
+  //     src="${movieFastData.Poster}"
+  //     alt=""
+  //   />
+  //   <p class="movie__title">${movieFastData.Title}</p>
+  //   <div class="movie__info">
+  //     <span class="movie__year">${movieFastData.Year}</span>
+  //     <span class="movie__genre">${movieFastData.Genre}</span>
+  //   </div>
+  // </div>`
+  
+}
+
+allFastMovies()

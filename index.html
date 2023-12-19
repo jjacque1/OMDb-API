@@ -42,8 +42,13 @@
               id="movie-name"
             />
             <div class="font__awesome--wrapper">
-              <button class="search__btn" href="" id="movie__search-btn"   onclick="main()">
-                <i onkeypress="main()" class="fa-solid fa-magnifying-glass"></i>
+              <button
+                class="search__btn"
+                href=""
+                id="movie__search-btn"
+                onclick="main()"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
           </div>
@@ -55,9 +60,10 @@
 
     <section id="search">
       <div class="filter__container">
-        <h2 class="search__info">Search result:</h2>
+        <h2 id="search__info" class="search__info">Search result:</h2>
+        <!-- <h2 id="search__result" class="search__result">Search result for:</h2> -->
         <div class="filter__wrapper">
-          <select id="filter">
+          <select id="filter" onchange="filterMovies(event)">
             <option value="" disabled selected>Filter</option>
             <option value="LATEST">Latest</option>
             <option value="TRENDING">Trending</option>
@@ -69,28 +75,9 @@
     <section id="movies">
       <div class="container">
         <div class="row">
-          <div class="movie__list" id="result">
-            <div class="movie">
-              <!-- <a href="movie.html" target="_blank" class="movie__card">
-                <div class="movie__img--wrapper">
-                  <img
-                    class="movie__img"
-                    src="https://m.media-amazon.com/images/M/MV5BMTM3NTg2NDQzOF5BMl5BanBnXkFtZTcwNjc2NzQzOQ@@._V1_SX300.jpg"
-                    alt=""
-                  />
-                  <p class="movie__title">Fast & Furious 6</p>
-                  <div class="movie__info">
-                    <span class="movie__year">2013</span>
-                    <span class="movie__genre">Action</span>
-                  </div>
-                </div>
-              </a> -->
-            </div>
-          </div>
+          <div class="movie__list" id="result"></div>
+          <div class="movie__list" id="movieFast"></div>
         </div>
-      </div>
-      <div id="result">
-
       </div>
     </section>
     <footer id="footer">
