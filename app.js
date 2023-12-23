@@ -1,4 +1,4 @@
-//API: https://www.omdbapi.com/?apikey=bef2d4c&s=fast
+// API: https://www.omdbapi.com/?apikey=bef2d4c&s=${movieName}
 // DETAILS: https://www.omdbapi.com/?i=${movies.imdbID}&apikey=bef2d4c
 
 let movieNameRef = document.getElementById("movie-name");
@@ -13,7 +13,8 @@ async function main() {
   const moviesData = await movies.json();
 
   if (moviesData.Response === "True") {
-    result.innerHTML = `<div class="result_grid" id="result_grid">
+    result.innerHTML = 
+    `<div class="result_grid" id="result_grid">
     <div class="movie_poster">
       <img
         class="img"
@@ -77,14 +78,49 @@ main();
 //   <div class="movie__img--wrapper">
 //     <img
 //       class="movie__img"
-//       src=${movies.Poster}
+//       src=${moviesData.Poster}
 //       alt=""
 //     />
-//     <p class="movie__title">${movies.Title}</p>
+//     <p class="movie__title">${moviesData.Title}</p>
 //     <div class="movie__info">
-//       <span class="movie__year">${movies.Year}</span>
-//       <span class="movie__genre">${movies.Type}</span>
+//       <span class="movie__year">${moviesData.Year}</span>
+//       <span class="movie__genre">${moviesData.Type}</span>
 //     </div>
 //   </div>
 //  </a>`;
 // }
+
+
+
+
+async function difMoviesLoad() {
+  const moviesBtn = await fetch("https://www.omdbapi.com/?apikey=bef2d4c&s=hard");
+  const moviesBtnData = await moviesBtn.json();
+  console.log(moviesBtnData)
+
+  moviesBtnData.map(movie => {
+    return   `<a href="movie.html" target="_blank" class="movie__card">
+    <div class="movie__img--wrapper">
+      <img
+        class="movie__img"
+        src=${moviesBtnData.Poster}
+        alt=""
+      />
+      <p class="movie__title">${moviesBtnData.Title}</p>
+      <div class="movie__info">
+        <span class="movie__year">${moviesBtnData.Year}</span>
+        <span class="movie__genre">${moviesBtnData.Type}</span>
+      </div>
+    </div>
+   </a>`
+  })
+  
+  
+  
+
+};
+
+difMoviesLoad()
+
+
+  
