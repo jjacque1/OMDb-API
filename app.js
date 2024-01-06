@@ -61,7 +61,7 @@ main();
 
 // const url = "https://www.omdbapi.com/?apikey=bef2d4c&s=hard";
 // const movie__listEl = document.querySelector(".movie__list");
-// async function main() {
+// async function main1() {
 //   const movies = await fetch(url);
 //   const moviesData = await movies.json();
 //   console.log(moviesData.Search)
@@ -71,7 +71,7 @@ main();
 //   ).join("");
 // }
 
-// main();
+// main1   ();
  
 // function moviesHtml(movies) {
 //   return `<a href="movie.html" target="_blank" class="movie__card">
@@ -98,22 +98,7 @@ async function difMoviesLoad() {
   const moviesBtnData = await moviesBtn.json();
   console.log(moviesBtnData)
 
-  moviesBtnData.map(movie => {
-    return   `<a href="movie.html" target="_blank" class="movie__card">
-    <div class="movie__img--wrapper">
-      <img
-        class="movie__img"
-        src=${moviesBtnData.Poster}
-        alt=""
-      />
-      <p class="movie__title">${moviesBtnData.Title}</p>
-      <div class="movie__info">
-        <span class="movie__year">${moviesBtnData.Year}</span>
-        <span class="movie__genre">${moviesBtnData.Type}</span>
-      </div>
-    </div>
-   </a>`
-  })
+  
   
   
   
